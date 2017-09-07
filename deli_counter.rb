@@ -1,25 +1,25 @@
 # Write your code here.
 katz_deli = []
 
-def line(ar)
-  if ar.empty?
+def line(lin)
+  if lin.empty?
     puts "The line is currently empty."
   else
     s = "The line is currently:"
-    ar.each_index{|a| s << " #{a + 1}. #{ar.at(a)}"}
+    lin.each{|name| s << " #{lin.index(name)+1}. #{name}"}
     puts s
   end
 end
 
-def take_a_number(ar, name)
-  ar << name
-  puts "Welcome, #{name}. You are number #{ar.index(name) + 1} in line."
+def take_a_number(lin, name)
+  lin << name
+  puts "Welcome, #{name}. You are number #{lin.index(name) + 1} in line."
 end
 
-def now_serving(ar)
-  if ar.empty?
+def now_serving(lin)
+  if lin.empty?
     puts "There is nobody waiting to be served!"
   else
-    puts "Currently serving #{ar.shift}."
+    puts "Currently serving #{lin.shift}."
   end
 end

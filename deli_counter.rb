@@ -15,7 +15,7 @@ end
 
 def take_a_number(lin, name) # puts welcome message, appends name to line array
   lin << name
-  puts "Welcome, #{name}. You are number #{lin.length} in line."
+  puts "Welcome, #{name}. You are number #{lin.length} in line." # lin.length previously lin.index(name)+1
 end
 
 def now_serving(lin) # checks if line is full, if so puts currently serving message and removes first name in line array
